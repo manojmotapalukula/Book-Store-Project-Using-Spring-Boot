@@ -1,9 +1,9 @@
 # Book-Store-Project-Using-Spring-Boot
 
-#Book Store Project
+# Book Store Project
 This is a Book Store application developed using Spring Boot, with various modern web development tools integrated. The application allows users to browse books, add them to a cart, and manage book details, while offering a clean and responsive frontend interface.
 
-##Technologies Used
+## Technologies Used
 Spring Boot: The core framework used to build the application.
 Spring Web: For building web applications and handling HTTP requests and responses.
 Spring Data JPA: To interact with the MySQL database through the Java Persistence API (JPA).
