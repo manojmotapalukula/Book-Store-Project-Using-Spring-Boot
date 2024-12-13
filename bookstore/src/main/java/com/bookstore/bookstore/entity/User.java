@@ -5,5 +5,5 @@ public class User {
 	private String email;
 	private String password;
 	private String confirmPassword;
-
+	// for user registration and login not inmelented in this project so not required
 }
