@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add New Book</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" th:href="@{/}">Bookstore</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" th:href="@{/}">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" th:href="@{/viewallbooks}">Shop</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" th:href="@{/mybooks}">My Books</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" th:href="@{/addnewbook}">Add Book</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+	<div class="container mt-5">
+	        <form style="border:1px solid black; padding:15px;" th:action="@{/updatebook/{id} (id=${book.id})}"   method="post">
+	            <center><h2>Add New Book</h2></center>
+	            <div class="form-group">
+	                <label for="bookName">Book Name</label>
+	                <input type="text" class="form-control" name="bookName" th:field="${book.bookName}" placeholder="Enter book name">
+	            </div>
+	            <div class="form-group">
+	                <label for="author">Author</label>
+	                <input type="text" class="form-control" name="author" th:field="${book.author}" placeholder="Enter author">
+	            </div>
+	            <div class="form-group">
+	                <label for="price">Price</label>
+	                <input type="text" class="form-control" name="price" th:field="${book.price}" placeholder="Enter book price">
+	            </div>
+	            <center><button type="submit" class="btn btn-primary">Submit</button></center>
+	        </form>   
+	    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

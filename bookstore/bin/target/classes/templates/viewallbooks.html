@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+        <a class="navbar-brand" th:href="@{/}">Bookstore</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" th:href="@{/}">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" th:href="@{/viewallbooks}">View Books</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" th:href="@{/mybooks}">My Books</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" th:href="@{/addnewbook}">Add Book</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+    <div class="container mt-5">
+        <table class="table table-striped thead-dark table-bordered table-hover">
+            <thead>
+              <tr>
+                <th >S.No</th>
+                <th >Book Name</th>
+                <th >Author</th>
+                <th >Price</th>
+                <th >Action</th>
+                
+              </tr>
+            </thead>
+            <tbody>
+              <tr th:each = "book : ${books}">
+                <td th:text = "${book.bookId}"></td>
+                <td th:text = "${book.bookName}"></td>
+                <td th:text = "${book.author}"></td>
+                <td th:text = "${book.price}"></td>
+                <td>
+                    <a href="" class="btn btn-secondary btn-sm">Add to MyBooks</a>
+                    <a href="" class="btn btn-primary btn-sm">Edit</a>
+                    <a href="" class="btn btn-danger btn-sm">Delete</a>
+                </td>
+              </tr>
+              
+            </tbody>
+          </table>
+        
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

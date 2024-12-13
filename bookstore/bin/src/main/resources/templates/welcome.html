@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to Our Bookstore</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom Styles -->
+    <style>
+        .hero-section {
+            background-image: url('https://via.placeholder.com/1920x600'); /* Placeholder image */
+            background-size: cover;
+            background-position: center;
+            height: 600px;
+            color: white;
+        }
+        .hero-section h1 {
+            font-size: 3.5rem;
+            font-weight: bold;
+        }
+        .hero-section p {
+            font-size: 1.25rem;
+        }
+        .btn-primary {
+            background-color: #f8b400;
+            border: none;
+        }
+        .btn-primary:hover {
+            background-color: #ff8f00;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" th:href="@{/}">Bookstore</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" th:href="@{/}">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" th:href="@{/viewallbooks}">View Books</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" th:href="@{/mybooks}">My Books</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" th:href="@{/addnewbook}">Add Book</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="hero-section text-center d-flex justify-content-center align-items-center">
+        <div class="container">
+            <h1>Welcome to Our Bookstore</h1>
+            <p>Explore a vast collection of books across various genres</p>
+            <a href="#shop" class="btn btn-primary btn-lg">Start Shopping</a>
+        </div>
+    </div>
+
+    <!-- Featured Books Section -->
+    <div class="container mt-5">
+        <h2 class="text-center">Featured Books</h2>
+        <div class="row">
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="https://via.placeholder.com/200x300" class="card-img-top" alt="Book 1">
+                    <div class="card-body">
+                        <h5 class="card-title">Book Title 1</h5>
+                        <p class="card-text">A brief description of the book.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="https://via.placeholder.com/200x300" class="card-img-top" alt="Book 2">
+                    <div class="card-body">
+                        <h5 class="card-title">Book Title 2</h5>
+                        <p class="card-text">A brief description of the book.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="https://via.placeholder.com/200x300" class="card-img-top" alt="Book 3">
+                    <div class="card-body">
+                        <h5 class="card-title">Book Title 3</h5>
+                        <p class="card-text">A brief description of the book.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center py-3">
+        <p>&copy; 2024 Bookstore | All rights reserved</p>
+    </footer>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
